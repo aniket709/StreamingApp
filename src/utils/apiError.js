@@ -1,4 +1,3 @@
-import { sendStatusCode } from "next/dist/server/api-utils"
 
 class ApiError extends Error {
 
