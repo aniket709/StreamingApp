@@ -9,7 +9,7 @@ import bcrypt from "bcrypt"
 
 const userSchema = new Schema({
 
-  Username :{
+  username :{
 
       type : String,
       required: true,
@@ -52,6 +52,8 @@ const userSchema = new Schema({
     coverImage: {
 
         type : String,
+        required: false
+        
 
     },
 
