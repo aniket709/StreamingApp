@@ -9,7 +9,6 @@ import {verifyJwt} from "../middlewares/auth.middleware.js"
 
 const router = Router()
 
-
   router.route("/register").post(
     
     upload.fields([
@@ -28,7 +27,9 @@ const router = Router()
     registerUser)
 
     router.route ("/login").post (loginUser)
+        
     router.route("/logout").post(verifyJwt,logOutUser)
+
     router.route("/refreshToken").post(refreshAccessToken)
 
   
