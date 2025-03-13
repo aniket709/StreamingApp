@@ -1,11 +1,8 @@
 // import express from "express"
 import { Router } from "express"; 
-import { registerUser,loginUser,logOutUser } from "../controllers/user.controller.js";
+import { registerUser,loginUser,logOutUser, refreshAccessToken } from "../controllers/user.controller.js";
 import {upload} from "../middlewares/multer.middleware.js"
 import {verifyJwt} from "../middlewares/auth.middleware.js"
-
-
-
 
 
 
@@ -30,14 +27,9 @@ const router = Router()
     ]),
     registerUser)
 
-    router.route ("/login").post (
-
-
-
-        loginUser)
-
-
+    router.route ("/login").post (loginUser)
     router.route("/logout").post(verifyJwt,logOutUser)
+    router.route("/refreshToken").post(refreshAccessToken)
 
   
 
