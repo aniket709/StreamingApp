@@ -23,7 +23,6 @@ const videoSchema = new mongoose({
         type :String,
 
         required:true
-
     },
 
     description :{
@@ -59,8 +58,6 @@ const videoSchema = new mongoose({
         type :Schema.Types.ObjectId,
         ref : "User"
     }
-
-
 
 },{timestamps:true})
 
